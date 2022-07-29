@@ -1,3 +1,8 @@
+//Resource controller
+//In Spring's approach to building RESTful web services, HTTP requests are handld by a controller.
+//These components are identified by the @RestController annotation and the GreetingController.
+//This handles GET requests for /greeting by returning a new instance of the Greeting class
+
 package com.example.restservice.Greeting;
 
 import org.springframework.web.bind.annotation.GetMapping;
