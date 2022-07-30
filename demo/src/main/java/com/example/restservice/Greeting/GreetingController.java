@@ -24,7 +24,7 @@ public class GreetingController {
     }
 
     @GetMapping("/another")
-    public AnotherGreeting anotherGreeting(@RequestParam(value = "monkey") String monkey) {
+    public AnotherGreeting anotherGreeting(@RequestParam(value = "monkey", defaultValue = "YOU") String monkey) {
         return new AnotherGreeting(counter.incrementAndGet(), String.format(template2, monkey));
     }
 }
