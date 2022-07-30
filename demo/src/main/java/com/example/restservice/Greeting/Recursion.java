@@ -2,7 +2,7 @@ package com.example.restservice.Greeting;
 
 public class Recursion {
 
-    public static void search(int[] arr, int target) {
+    public static int search(int[] arr, int target) {
         int min = 0, max = arr.length - 1;
         int mid = (int) Math.floor((max + min) / 2 );
 
