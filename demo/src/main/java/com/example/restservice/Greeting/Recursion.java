@@ -10,7 +10,7 @@ public class Recursion {
             if ( target > arr[mid] ) {
                 min = mid + 1;
             } else {
-                max = mid - 1
+                max = mid - 1;
             }
             mid = (int) Math.floor((max + min) / 2 );
         }
