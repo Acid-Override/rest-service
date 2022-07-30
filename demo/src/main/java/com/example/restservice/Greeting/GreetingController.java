@@ -15,10 +15,16 @@ import java.util.concurrent.atomic.AtomicLong;
 public class GreetingController {
 
     private static final String template = "Hello, %s!";
+    private static final String template2 = "Chaos Monkey has attacked, %s!";
     private final AtomicLong counter = new AtomicLong();
 
     @GetMapping("/greeting")
     public Greeting greeting(@RequestParam(value = "name", defaultValue = "World") String name) {
         return new Greeting(counter.incrementAndGet(), String.format(template, name));
+    }
+
+    @GetMapping("/another")
+    public AnotherGreeting anotherGreeting(@RequestParam(value = "monkey") String monkey) {
+        return new AnotherGreeting((counter.incrementAndGet(), String.format(template2, monkey)))
     }
 }
